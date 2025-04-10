@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles Factura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Detalles Facturas</h2>
+    
+    <!-- Formulario para agregar gesfactura -->
+    <form id="formgesfactura">
+        <select id="productos_id">
+            <option value="">Cargando...</option>
+        </select>
+        <input type="number" id="cantidades" placeholder="cantidades" required>
+        <input type="number" id="precios" placeholder="precios" required>
+        <select id="factura_id">
+            <option value="">Cargando...</option>
+        </select>
+        <button type="submit">Agregar Detalle</button>
+    </form>
+    <!-- Tabla de gesfacturas -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Productos</th>
+                <th>Cantidades</th>
+                <th>Precios</th>
+                <th>ID Factura</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="gesfacturasTabla"></tbody>
+    </table>
+
+    <!-- Modal para editar gesfactura -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Editar Detalle Factura</h3>
+            <input type="hidden" id="editId"> 
+            <label for="">Producto</label>
+            <input type="number" id="editproductos_id">
+            <label for="">Cantidades</label>
+            <input type="number" id="editcantidades" >
+            <label for="">Precios</label>
+            <input type="number" id="editprecios" >
+            <label for="">Factura</label>
+            <input type="number" id="editfactura_id" >
+            <button id="btnActualizar">Actualizar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

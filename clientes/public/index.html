@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Gestión de Clientes</h2>
+    
+    <!-- Formulario para agregar Cliente -->
+    <form id="formCliente">
+        <input type="number" id="ci" placeholder="CI" required>
+        <input type="text" id="nombres" placeholder="Nombres" required>        
+        <input type="text" id="apellidos" placeholder="Apellidos" required>
+        <input type="text" id="sexo" placeholder="Sexo (F,M)" required>
+        <button type="submit">Agregar Cliente</button>
+    </form>
+
+    <!-- Tabla de Clientes -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>CI</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Sexo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="ClientesTabla"></tbody>
+    </table>
+
+    <!-- Modal para editar Cliente -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Editar Cliente</h3>
+            <input type="hidden" id="editId">            
+            <input type="number" id="editCI" placeholder="CI">
+            <input type="text" id="editNombres" placeholder="Nombres">            
+            <input type="text" id="editApellidos" placeholder="apellidos">
+            <input type="text" id="editSexo" placeholder="Sexo">
+            <button id="btnActualizar">Actualizar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

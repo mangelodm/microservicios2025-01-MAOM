@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Facturas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Creacion de Facturas</h2>
+    
+    <!-- Formulario para agregar Factura -->
+    <form id="formFactura">
+        <input type="date" id="fecha" placeholder="fecha" required>
+        <select id="cliente_id">
+            <option value="">Cargando...</option>
+          </select>
+        <button type="submit">Agregar Factura</button>
+    </form>
+    <!-- Tabla de Facturas -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>fecha</th>
+                <th>cliente_id</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="FacturasTabla"></tbody>
+    </table>
+
+    <!-- Modal para editar Factura -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Editar Factura</h3>
+            <input type="hidden" id="editId">            
+            <input type="date" id="editfecha" placeholder="fecha"> 
+            <input type="number" id="editcliente_id" >
+            <button id="btnActualizar">Actualizar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
