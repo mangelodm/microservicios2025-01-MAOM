@@ -1,0 +1,3 @@
+descargar los archivos node 
+npm init -y
+npm install express mysql
